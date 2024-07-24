@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 using VeganRecipes.DataAccess.Repository.IRepository;
+using VeganRecipes.Entity.Models;
 
 namespace VeganRecipes.Controllers
 {
@@ -15,6 +17,13 @@ namespace VeganRecipes.Controllers
         {
             var result = await _foodRepository.ListOfFoods();
             return View(result);
+        }
+
+        public async Task<IActionResult> ViewRecipe(string id)
+        {
+           var result = await _foodRepository.DetailedFoodRecipeByID(id);
+
+           return View(result);
         }
     }
 }
