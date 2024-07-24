@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VeganRecipes.DataAccess\VeganRecipes.DataAccess.csproj" />
+    <ProjectReference Include="..\VeganRecipes.Entity\VeganRecipes.Entity.csproj" />
+  </ItemGroup>
+
 </Project>

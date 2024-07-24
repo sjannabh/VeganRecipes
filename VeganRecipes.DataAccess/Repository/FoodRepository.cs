@@ -1,5 +1,7 @@
 ﻿
 
+using Microsoft.Extensions.Configuration;
+using System.Net.Http.Json;
 using VeganRecipes.DataAccess.Repository.IRepository;
 using VeganRecipes.Entity.Models;
 
@@ -7,14 +9,27 @@ namespace VeganRecipes.DataAccess.Repository
 {
     public class FoodRepository : IFoodRepository
     {
-        public Task<Food> DetailedFoodRecipeByID(string id)
+        private readonly HttpClient _client;
+        private readonly IConfiguration _config;
+        public FoodRepository(IConfiguration config)
         {
-            throw new NotImplementedException();
+            _config = config;
+            string baseUri = _config["VeganFoodList:BaseUrl"];
+            _client = new HttpClient();
+            _client.BaseAddress = new Uri(baseUri);
+            _client.DefaultRequestHeaders.Add("Accept", "application/json");
+            _client.DefaultRequestHeaders.Add("x-rapidapi-host", _config["VeganFoodList:host"]);
+            _client.DefaultRequestHeaders.Add("x-rapidapi-key", _config["VeganFoodList:key"]);
+
+        }
+        public async Task<Food> DetailedFoodRecipeByID(string id)
+        {
+            return await _client.GetFromJsonAsync<Food>("/" + id);
         }
 
-        public Task<IEnumerable<FoodList>> ListOfFoods()
+        public async Task<IEnumerable<FoodList>> ListOfFoods()
         {
-            throw new NotImplementedException();
+            return await _client.GetFromJsonAsync<IEnumerable<FoodList>>("/");
         }
     }
 }

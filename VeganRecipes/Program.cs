@@ -1,7 +1,11 @@
+using VeganRecipes.DataAccess.Repository.IRepository;
+using VeganRecipes.DataAccess.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<IFoodRepository, FoodRepository>();
 
 var app = builder.Build();
 
