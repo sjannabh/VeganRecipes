@@ -1,4 +1,4 @@
-namespace VeganRecipes.Models
+namespace VeganRecipes.Entity.Models
 {
     public class ErrorViewModel
     {

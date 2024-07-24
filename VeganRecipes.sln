@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeganRecipes", "VeganRecipes\VeganRecipes.csproj", "{B770E047-8880-40BA-9E13-5024D79C3C97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VeganRecipes.Web", "VeganRecipes\VeganRecipes.Web.csproj", "{B770E047-8880-40BA-9E13-5024D79C3C97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeganRecipes.Entity", "VeganRecipes.Entity\VeganRecipes.Entity.csproj", "{AB9BDEBD-3CE3-4B46-9841-5D2CA42EBABA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeganRecipes.DataAccess", "VeganRecipes.DataAccess\VeganRecipes.DataAccess.csproj", "{30ADFA30-D179-4320-8ACB-ADE5D228AB50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{B770E047-8880-40BA-9E13-5024D79C3C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B770E047-8880-40BA-9E13-5024D79C3C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B770E047-8880-40BA-9E13-5024D79C3C97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB9BDEBD-3CE3-4B46-9841-5D2CA42EBABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB9BDEBD-3CE3-4B46-9841-5D2CA42EBABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB9BDEBD-3CE3-4B46-9841-5D2CA42EBABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB9BDEBD-3CE3-4B46-9841-5D2CA42EBABA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30ADFA30-D179-4320-8ACB-ADE5D228AB50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30ADFA30-D179-4320-8ACB-ADE5D228AB50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30ADFA30-D179-4320-8ACB-ADE5D228AB50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30ADFA30-D179-4320-8ACB-ADE5D228AB50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
